@@ -31,6 +31,13 @@ $database = new Medoo([
 $data = $database->select("users", "*");
 ```
 
+### **Hämta enskilda resultat**
+```php
+$data = $database->get("users", "*", [
+    "id" => 1
+]);
+```
+
 ### **Hämta specifika kolumner**
 ```php
 $data = $database->select("users", ["id", "name", "email"]);
